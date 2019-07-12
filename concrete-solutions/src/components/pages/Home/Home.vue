@@ -10,20 +10,28 @@
         v-model="search"
       />
     </form>
-    <p>name: {{ searchResult.name }}</p>
-    <p>email: {{ searchResult.email }}</p>
-    <p>bio: {{ searchResult.bio }}</p>
-    <p>followers: {{ searchResult.followers }}</p>
-    <p>following: {{ searchResult.following }}</p>
-    <img :src="searchResult.avatar_url" />
-    <router-link :to="`/users/${searchResult.login}`">Perfil</router-link>
+    <div>
+      <user-card
+        :user-name="searchResult.name"
+        :user-email="searchResult.email"
+        :user-bio="searchResult.bio"
+        :user-login="searchResult.login"
+        :user-avatar="searchResult.avatar_url"
+        :user-followers="searchResult.followers"
+        :user-following="searchResult.following"
+      ></user-card>
+    </div>
   </div>
 </template>
 
 <script>
 import UserService from "@/services/user.services";
+import UserCard from "@/components/molecules/UserCard";
 
 export default {
+  components: {
+    "user-card": UserCard
+  },
   data() {
     return {
       search: "",
