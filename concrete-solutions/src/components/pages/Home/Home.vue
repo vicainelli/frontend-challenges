@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <wrapper>
     <form action="">
       <label for="search">Buscar usuário</label>
       <input
@@ -21,16 +21,20 @@
         :user-following="searchResult.following"
       ></user-card>
     </div>
-  </div>
+  </wrapper>
 </template>
 
 <script>
 import UserService from "@/services/user.services";
+
+import Wrapper from "@/components/utils/Wrapper";
+
 import UserCard from "@/components/molecules/UserCard";
 
 export default {
   components: {
-    "user-card": UserCard
+    "user-card": UserCard,
+    wrapper: Wrapper
   },
   data() {
     return {

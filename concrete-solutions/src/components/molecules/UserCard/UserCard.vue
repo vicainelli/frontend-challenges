@@ -74,8 +74,9 @@ export default {
 <style lang="scss" scoped>
 .user-card {
   padding: 8px;
-  border-top: 1px solid rgb(200,200,200);
-  border-bottom: 1px solid rgb(200,200,200);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
   font-family: sans-serif;
   display: flex;
   align-items: flex-start;
@@ -91,11 +92,14 @@ export default {
   h2 {
     font-size: 16px;
     margin: 0 0 8px;
-    color: rgb(40,40,40)
+    color: rgb(40, 40, 40);
   }
   p {
     margin: 0;
     font-size: 12px;
+    small {
+      display: block;
+    }
   }
 }
 
