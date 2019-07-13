@@ -62,11 +62,6 @@ export default {
           })
           .catch(e => console.error(e));
 
-        // fetch(`/search?q=${_this.search}`)
-        //   .then(res => res.json())
-        //   .then(res => {
-        //     _this.searchResult = res;
-        //   });
       }, 500);
     }
   }
