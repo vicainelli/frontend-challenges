@@ -22,7 +22,6 @@ export default {
 
 <style lang="scss" scoped>
 .button {
-  font-family: sans-serif;
   background-color: rgb(220, 220, 220);
   border: 1px solid rgb(30, 30, 30);
   appearance: none;
