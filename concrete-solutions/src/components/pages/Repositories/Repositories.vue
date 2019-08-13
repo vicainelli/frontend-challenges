@@ -53,7 +53,9 @@ export default {
           _this.data.repos = res.data;
           _this.loading.repos = false;
         })
-        .catch(e => console.error(e));
+        .catch(e => {
+          throw e;
+        });
     }
   }
 };

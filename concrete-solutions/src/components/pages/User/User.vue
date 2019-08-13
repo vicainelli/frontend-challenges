@@ -71,7 +71,9 @@ export default {
           _this.user = res.data;
           _this.loading.user = false;
         })
-        .catch(e => console.error(e));
+        .catch(e => {
+          throw e;
+        });
     }
   }
 };

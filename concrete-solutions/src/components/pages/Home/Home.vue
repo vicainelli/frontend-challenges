@@ -71,7 +71,7 @@ export default {
         })
         .catch(e => {
           _this.searchResult = null;
-          console.error(e);
+          throw e;
         });
     }
   }
